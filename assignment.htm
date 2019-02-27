@@ -1,0 +1,323 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>My Online Grocery Shop</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  margin: 0;
+}
+.header {
+  background-color:orange;
+  padding: 20px;
+  text-align: center;
+  font-family:verdana;
+}
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 20px;
+font-family:consolas;
+  text-decoration: none;
+}
+.navbar a:hover {
+  background-color: red;
+  color: black;
+}
+.navbar:button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  float:right;
+}
+.navbar a.right {
+  float: right;
+}
+navbar.form.input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: right;
+  width: 80%;
+  background: #f1f1f1;
+}
+
+navbar.form.search button {
+  float: right;
+  width: 30%;
+  padding: 10px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+}
+
+navbar.form.search button:hover {
+  background: #0b7dda;
+}
+
+form.search::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 20px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: green;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.row {  
+  display: -ms-flexbox; 
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.side {
+  -ms-flex: 50%; 
+  flex: 50%;
+  background-color: #f1f1f1f1;
+  padding: 20px;
+}
+
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+  
+}
+
+/* Caption text */
+.text {
+  color: rgb(20,255,60);
+  font-size: 60px;
+font-family:elephant;
+  padding: 300px 10px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #red;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 2.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+.footer{
+  float: left;
+  padding:20px;
+  font-family:arial;
+  width:100%;
+  color:green;
+  background-color: rgb(120,23,23);}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>MyOnlineShop</h1>
+</div>
+<div class="navbar">
+<div class="dropdown">
+    <button class="dropbtn">Home 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Fruits and Vegetables</a>
+      <a href="#">Meat</a>
+      <a href="#">Dairy and Eggs</a>
+      <a href="#">Health Foods</a>
+      <a href="#">Stationery</a>
+      <a href="#">Tobacco</a>
+      <a href="#">Drinks</a>
+      <a href="#">Bakery</a>
+      <a href="#">Pets</a>
+      <a href="#">Frozen Food</a>
+      <a href="#">Snacks</a>
+    </div>
+</div class="navbar">
+ <a href="#">Events</a>
+  <a href="#">About us</a>
+  <a href="#" class="right">Contact Us</a>
+  <a href="#" class="button">Login</a>
+</div>
+<div class="navbar">
+<form class="search" style="margin:auto;max-width:300px">
+  <input type="text" placeholder="Search.." name="search2">
+  <button type="submit"><i class="fa fa-search"></i></button>
+</form>
+</div>
+<div class="row">
+  <div class="side">
+    <h2 style="color:rgb(180,40,55)">WELCOME TO MY ONLINE GROCERY SHOP!!!!</h2>
+    <h5 style="color:rgb(255,100,50)">Make your Own choice and get the Best You Want!!!!!:</h5>
+    <div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 5</div>
+  <img src="beef.jpg" style="width:95%">
+  <div class="text">Enjoy 50% Discount<br> Today</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 5</div>
+  <img src="groceries.jpg" style="width:90%">
+  <div class="text">Free Delivery</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 5</div>
+  <img src="grossjpg.jpg" style="width:90%">
+  <div class="text">‏50% OFF</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">4 / 5</div>
+  <img src="RedGrape.jpg" style="width:80%">
+  <div class="text">Free Delivery</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">5 / 5</div>
+  <img src="avocado.jpg" style="width:80%">
+  <div class="text">Hurry!!!!!</div>
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+<span class="dot"></span>   
+<span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 3000); // Change image every 3 seconds
+}
+</script>
+</div>
+
+ <div class="main">
+    <h1 style="color:rgb(120,20,200)">Hurry!!!!!!<br>For Today's Specials</h1>
+    <h2 style="color:red">And Enjoy<br><br> <b>20%</b> to <b>50%</b><br><br> discount</h2>
+    <p style="color:green">Easter promotion<br>*******<br>******<br>******<br> Coming Soon!!!!</p>
+</div>
+<div class="footer">
+<p>MyOnlineShop offers a safe and reliable way<br> of shopping products via the internet. <br>You can buy bakery, sanitary, Eggs, fruits, vegetables, meet, dairy products,pet food etc.
+ <br>Pay using any payment method thats affordable to you <br>-<b> Ecocash, RTGS, Cash, Zimswitch.</b> <br>We can deliver everywhere in Matabeleland North.</p> <style="position:right"><br>||Follows Us on </p>
+</div>
+</body>
+</html>
